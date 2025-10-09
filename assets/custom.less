@@ -1,0 +1,54 @@
+@bs-border-color: #d9dee3;
+
+.card-header-control {
+  padding: 13px !important
+}
+
+.show-mobile {
+  display: block;
+}
+
+.show-computer {
+  display: none;
+}
+
+.checkbox-wrapper {
+  //background-color: #eeeeee;
+  background-color: white;
+  padding: 6px 6px 0 6px;
+  border-radius: 7px;
+}
+
+.small-box {
+  padding: 0.25rem 0.6875rem;
+  font-size: 0.80rem;
+  border-radius: 0.25rem;
+  color: #8592a3;
+  border-color: #8592a3;
+  background: transparent;
+  display: inline-block;
+  font-weight: 400;
+  line-height: 1.53;
+}
+
+.v-input__slot fieldset {
+  border: 1px solid @bs-border-color!important;
+}
+
+div[role="combobox"] fieldset {
+  border: 1px solid @bs-border-color;
+}
+
+.v-input.v-input--is-focused fieldset {
+  border: 1px solid #696cff!important;
+}
+
+@media only screen and (min-width: 767px) {
+  .show-mobile {
+    display: none;
+  }
+
+  .show-computer {
+    display: block !important;
+  }
+}
