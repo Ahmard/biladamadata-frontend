@@ -79,6 +79,24 @@
 
                   <div class="row">
                     <div class="col-md">
+                      <label class="form-label" for="email">Email (Optional)</label>
+                      <input
+                        id="email"
+                        v-model="form.email"
+                        :disabled="submitting"
+                        class="form-control"
+                        maxlength="14"
+                        minlength="9"
+                        name="email"
+                        placeholder="jane.doe@example.com"
+                        required
+                        type="text"
+                      />
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-md">
                       <div class="form-password-toggle">
                         <div class="d-flex justify-content-between">
                           <label class="form-label" for="password">Password</label>

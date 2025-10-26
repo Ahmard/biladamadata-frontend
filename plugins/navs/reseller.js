@@ -1,5 +1,11 @@
 export default [
   {
+    url: '/',
+    name: 'Home',
+    icon: 'home',
+    slug: '',
+  },
+  {
     url: '/data/buy',
     name: 'Buy Data',
     icon: 'layer-plus',

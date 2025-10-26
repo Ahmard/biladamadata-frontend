@@ -22,10 +22,10 @@
                 <form id="formAuthentication" @submit.prevent="login">
                   <div class="mb-3">
                     <div class="d-flex justify-content-between">
-                      <label class="form-label" for="email">Username or Email</label>
-                      <NuxtLink to="verify_email">
-                        <small>Verify Email</small>
-                      </NuxtLink>
+                      <label class="form-label" for="email">Phone Number or Email</label>
+<!--                      <NuxtLink to="verify_email">-->
+<!--                        <small>Verify Email</small>-->
+<!--                      </NuxtLink>-->
                     </div>
                     <input
                       id="email"
@@ -34,7 +34,7 @@
                       autofocus
                       class="form-control"
                       name="dtn_email"
-                      placeholder="Enter your username or email address"
+                      placeholder="Enter your phone number or email address"
                       required
                     />
                   </div>
