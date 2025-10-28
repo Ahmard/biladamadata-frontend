@@ -150,7 +150,7 @@ export default {
               return
             }
 
-            window.location.reload()
+            window.location.href = '/dashboard'
           })
         })
         .catch(error => {

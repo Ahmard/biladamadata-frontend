@@ -22,5 +22,5 @@ export function validateAuth(user: LooseObject, role: string[]) {
     }
   }
 
-  return windowLoaded(() => redirect(`/`))
+  return windowLoaded(() => redirect(`/dashboard`))
 }

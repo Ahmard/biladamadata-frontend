@@ -44,7 +44,6 @@ export default {
       {src: '/assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.js', body: true},
       {src: '/assets/vendor/js/menu.js', body: true},
       {src: '/assets/js/main.js', body: true},
-      {src: '/js/phprtc-client.js', body: true},
       // {src: '/assets/js/dashboards-analytics.js', body: true},
       // {src: '/assets/js/buttons.js', body: true},
     ],
@@ -131,9 +130,7 @@ export default {
   },
 
   auth: {
-    plugins: [
-      '~/plugins/inject-websocket.js'
-    ],
+    plugins: [],
     cookie: {
       options: {
         sameSite: 'lax'
