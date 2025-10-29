@@ -143,12 +143,14 @@
             </div>
             <div class="text-center pt-4">
               <div>
-                <check-success/>
+                <check-success v-if="data_transaction.status === 'processed'"/>
+                <i class="bx bx-error" style="font-size: 60px; color: red" v-if="data_transaction.status === 'failed'"/>
+                <i class="bx bx-shape-triangle" style="font-size: 60px; color: coral" v-if="data_transaction.status === 'processing'"/>
               </div>
               <div class="mt-3" style="font-size: 21px">Data Transaction</div>
               <div class="mt-3" style="font-size: 19px">{{ processed_message }}</div>
 
-              <div class="mt-5 text-end">
+              <div class="mt-5 text-end" v-if="data_transaction.status === 'processed'">
                 <a target="_blank" :href="data_transaction.pdf_print_url">
                   <v-btn outlined text>
                     <i class="bx bxs-file-pdf"></i> PDF
@@ -326,11 +328,15 @@ export default {
         .then(resp => {
           this.loading = false
 
-          this.processed_message = resp.data.data.status === 'processing'
-            ? 'Your data transaction is being processed'
-            : 'Data transaction succeeded'
-
           this.data_transaction = DataTransaction.fromData(resp.data.data).prepareData()
+
+          if (this.data_transaction.status === 'processed') {
+            this.processed_message = 'Data transaction succeeded'
+          } else if (this.data_transaction.status === 'processing') {
+            this.processed_message = 'Your data transaction is being processed'
+          } else {
+            this.processed_message = 'Data transaction failed'
+          }
 
           this.dialog_processed = true
 

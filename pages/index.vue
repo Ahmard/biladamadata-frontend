@@ -352,7 +352,9 @@ export default {
             <div class="plan-validity">{{ plan.validity }}</div>
             <div class="plan-price">₦{{ plan.price.toLocaleString() }}</div>
             <div class="plan-badge">Instant Delivery</div>
-            <button class="buy-now-btn">Buy Now</button>
+            <NuxtLink to="/dashboard">
+              <button class="buy-now-btn">Buy Now</button>
+            </NuxtLink>
           </div>
         </div>
 
@@ -386,7 +388,6 @@ export default {
               <div class="contact-details">
                 <h4>Email</h4>
                 <p>Send us an email, we'll respond within 24 hours</p>
-                <a href="mailto:noreply@biladamadata.com">noreply@biladamadata.com</a><br>
                 <a href="mailto:info@biladamadata.com">info@biladamadata.com</a>
               </div>
             </div>
@@ -425,13 +426,15 @@ export default {
       <h2>Get Started Today</h2>
       <p>Download our mobile app or login to our web platform</p>
       <div class="app-badges">
-        <div class="app-badge">
-          <div class="app-badge-icon">🌐</div>
-          <div class="app-badge-text">
-            <small>Access via</small>
-            <strong>Web Platform</strong>
+        <NuxtLink to="/dashboard" style="color: white!important;">
+          <div class="app-badge">
+            <div class="app-badge-icon">🌐</div>
+            <div class="app-badge-text">
+              <small>Access via</small>
+              <strong>Web Platform</strong>
+            </div>
           </div>
-        </div>
+        </NuxtLink>
         <div class="app-badge">
           <div class="app-badge-icon">📱</div>
           <div class="app-badge-text">
